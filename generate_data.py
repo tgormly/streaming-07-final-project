@@ -42,12 +42,15 @@ animal_shelters = [
 ]
 
 def generate_random_date_within_last_month():
-    '''This function returns a random date within the last 30 days.
+    '''This function returns a random datetime within the last 30 days.
     This return is a datetime object'''
     today = datetime.today()
     start_date = today - timedelta(days=30)
 
-    random_date = start_date + timedelta(days=random.randint(0, 30))
+    random_date = start_date + timedelta(days=random.randint(0, 30),
+                                         hours=random.randint(0, 23),
+                                         minutes=random.randint(0, 59),
+                                         seconds=random.randint(0, 59))
     return random_date
 
 def generate_fake_animal_data(num_records):
@@ -96,8 +99,8 @@ with open('adoption_data.csv', 'w', newline='') as csvfile:
     
     writer.writeheader()
     for entry in fake_animal_data:
-        # Format the date to a string format before writing to CSV
-        entry['Adoption Date'] = entry['Adoption Date'].strftime('%Y-%m-%d')
+        # Format the date to the desired string format before writing to CSV
+        entry['Adoption Date'] = entry['Adoption Date'].strftime('%m/%d/%y %H:%M:%S')
         writer.writerow(entry)
 
 # # Print the generated data
