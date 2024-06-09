@@ -1,8 +1,10 @@
 """
 Tim Gormly
-6/2/2024
+6/9/2024
 
-This program will send messages to RabbitMQ.  These 
+This program will send messages to RabbitMQ.  These messages are meant to simulate
+new-listing updates from animal shelters across the United States.  These will be
+consumed downstream by consumers listening to the RabbitMQ queues.
 
 """
 
@@ -74,6 +76,7 @@ def send_message(host: str, queue_name: str, message: str):
 
 
 def main():
+    #TODO update this
     """
     On 30 second intervals, process 1 row from smoker-temps.csv file, simulating
     live data coming from a smart smoker.  CSV being processed has 4 columns,
@@ -85,11 +88,11 @@ def main():
     # offer rabbitmq admin site on launch
     offer_rabbitmq_admin_site()
 
-    logger.info(f'Attempting to access smoker-temps.csv')
+    logger.info(f'Attempting to access adoption_data.csv')
 
     try:
         # access file
-        with open("smoker-temps.csv", newline='') as csvfile:
+        with open("adoption_data.csv", newline='') as csvfile:
             reader = csv.reader(csvfile)
 
             # Skip header row
@@ -99,12 +102,19 @@ def main():
             for row in reader:
 
                 # assign variables from row
-                string_timestamp = row[0]
-                smokerTemp = row[1]
-                foodATemp = row[2]
-                foodBTemp = row[3]
+                name = row[0]
+                pet_type = row[1]
+                breed = row[2]
+                age = row[3]
+                color = row[4]
+                shelter_name = row[5]
+                shelter_city = row[6]
+                shelter_state = row[7]
+                date_posted = row[8]
 
-                logger.info(f'{string_timestamp} - Row Injested: {smokerTemp=}, {foodATemp=}, {foodBTemp=}')
+
+
+                logger.info(f'{date_posted} - Row Injested: {name=}, {pet_type=}, {breed=}, {age=}, {color=}, {shelter_name=}, {shelter_city=}, {date_posted=}')
 
                 
                 # convert datetime string into a datetime object
@@ -114,6 +124,7 @@ def main():
                 # if there is a value, send a message to that sensor's queue
                 # smoker itself
                 if smokerTemp:
+                    #TODO: update this
                     logger.info(f"calling send_message('localhost', '01-smoker', message)")
 
                     # pack message contents into serialized format
