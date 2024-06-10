@@ -12,7 +12,7 @@ import pika
 import sys
 import webbrowser
 import csv
-import struct
+import pickle
 import time 
 from datetime import datetime
 from util_logger import setup_logger
@@ -75,24 +75,24 @@ def send_message(host: str, queue_name: str, message: str):
         logger.info(f"connection closed: {host=}, {queue_name=}")
 
 
-def main():
-    #TODO update this
+def main(filepath):
     """
-    On 30 second intervals, process 1 row from smoker-temps.csv file, simulating
-    live data coming from a smart smoker.  CSV being processed has 4 columns,
-    one column marks the time, and the other three each represent one sensor.
+    On 30 second intervals, process 1 row from adoption_data.csv file, simulating
+    live data coming from animal shelters.  CSV being processed has 8 columns,
+    one column marks the time, and the others are different attributes of the animal
+    available for adoption
 
-    There is one RabbitMQ queue per sensor.  If there is a value present for
-    a sensor, a message will be sent to the appropriate queue.  
+    There is one RabbitMQ queue per animal type.  Cats and Dogs will each be
+    sent to their own queues.
     """
     # offer rabbitmq admin site on launch
     offer_rabbitmq_admin_site()
 
-    logger.info(f'Attempting to access adoption_data.csv')
+    logger.info(f'Attempting to access {filepath}')
 
     try:
         # access file
-        with open("adoption_data.csv", newline='') as csvfile:
+        with open(filepath, newline='') as csvfile:
             reader = csv.reader(csvfile)
 
             # Skip header row
@@ -102,50 +102,31 @@ def main():
             for row in reader:
 
                 # assign variables from row
-                name = row[0]
-                pet_type = row[1]
-                breed = row[2]
-                age = row[3]
-                color = row[4]
-                shelter_name = row[5]
-                shelter_city = row[6]
-                shelter_state = row[7]
-                date_posted = row[8]
-
-
-
-                logger.info(f'{date_posted} - Row Injested: {name=}, {pet_type=}, {breed=}, {age=}, {color=}, {shelter_name=}, {shelter_city=}, {date_posted=}')
-
+                animal_data = {
+                    'name': row[0],
+                    'pet_type': row[1],
+                    'breed': row[2],
+                    'age': int(row[3]),
+                    'color': row[4],
+                    'shelter_name': row[5],
+                    'shelter_city': row[6],
+                    'shelter_state': row[7],
+                    'date_posted': row[8]
+                }
+                logger.info(f"{animal_data['date_posted']} - Row Injested: "
+                    f"{animal_data['name']}, {animal_data['pet_type']}, {animal_data['breed']}, "
+                    f"{animal_data['age']}, {animal_data['color']}, {animal_data['shelter_name']}, "
+                    f"{animal_data['shelter_city']}, {animal_data['shelter_state']}, {animal_data['date_posted']}")
                 
-                # convert datetime string into a datetime object
-                datetime_timestamp = datetime.strptime(string_timestamp, "%m/%d/%y %H:%M:%S").timestamp()
                 
-                # check for a value present for each sensor (smokerTemp, foodATemp, foodBTemp)
-                # if there is a value, send a message to that sensor's queue
-                # smoker itself
-                if smokerTemp:
-                    #TODO: update this
-                    logger.info(f"calling send_message('localhost', '01-smoker', message)")
+                # select queue depending on pet type
+                queue = 'new-' + animal_data['pet_type'] + 's'
+                
+                logger.info(f"calling send_message('localhost', {queue}, {animal_data['name']}, {animal_data['pet_type']}, {animal_data['breed']})")
 
-                    # pack message contents into serialized format
-                    message = struct.pack("!df", datetime_timestamp, float(smokerTemp))
-                    send_message('localhost', '01-smoker', message)
-
-                # food A
-                if foodATemp:
-                    logger.info(f"calling send_message('localhost', '02-food-A', message)")
-
-                    # pack message contents into serialized format
-                    message = struct.pack("!df", datetime_timestamp, float(foodATemp))
-                    send_message('localhost', '02-food-A', message)
-
-                # food B
-                if foodBTemp:
-                    logger.info(f"calling send_message('localhost', '03-food-B', message)")
-                    
-                    # pack message contents into serialized format
-                    message = struct.pack("!df", datetime_timestamp, float(foodBTemp))
-                    send_message('localhost', '03-food-B', message)
+                # pack message contents into serialized format
+                message = pickle.dumps(animal_data)
+                send_message('localhost', queue, message)
 
                 # wait 30 seconds before reading next row
                 time.sleep(30)
@@ -160,8 +141,8 @@ def main():
 if __name__ == "__main__":  
 
     # specify file path for data source
-    file_path = 'smoker-temp.csv'
+    file_path = 'adoption_data.csv'
 
     # transmit task list
     logger.info(f'Beginning process: {__name__}')
-    main()
+    main(file_path)
