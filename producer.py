@@ -50,7 +50,7 @@ def send_message(host: str, queue_name: str, message: str):
 
         # use the connection to create a communication channel
         ch = conn.channel()
-        logger.info(f"connection opened: {host=}, {queue_name=}")
+        logger.info(f"\nconnection opened: {host=}, {queue_name=}")
 
         # use the channel to declare a durable queue
         # a durable queue will survive a RabbitMQ server restart
@@ -72,7 +72,7 @@ def send_message(host: str, queue_name: str, message: str):
     finally:
         # close the connection to the server
         conn.close()
-        logger.info(f"connection closed: {host=}, {queue_name=}")
+        logger.info(f"\nconnection closed: {host=}, {queue_name=}")
 
 
 def main(filepath):
@@ -113,24 +113,24 @@ def main(filepath):
                     'shelter_state': row[7],
                     'date_posted': row[8]
                 }
-                logger.info(f"{animal_data['date_posted']} - Row Injested: "
+
+                logger.info(f"{animal_data['date_posted']} - Row Injested:\n "
                     f"{animal_data['name']}, {animal_data['pet_type']}, {animal_data['breed']}, "
                     f"{animal_data['age']}, {animal_data['color']}, {animal_data['shelter_name']}, "
-                    f"{animal_data['shelter_city']}, {animal_data['shelter_state']}, {animal_data['date_posted']}")
-                
-                
+                    f"{animal_data['shelter_city']}, {animal_data['shelter_state']}, {animal_data['date_posted']}\n")
+                                
                 # select queue depending on pet type
                 queue = 'new-' + animal_data['pet_type'] + 's'
                 
-                logger.info(f"calling send_message('localhost', {queue}, {animal_data['name']}, {animal_data['pet_type']}, {animal_data['breed']})")
+                logger.info(f"calling send_message('localhost', {queue}, {animal_data['name']}, {animal_data['pet_type']}, {animal_data['breed']})\n")
 
                 # pack message contents into serialized format
                 message = pickle.dumps(animal_data)
                 send_message('localhost', queue, message)
 
                 # wait 30 seconds before reading next row
-                time.sleep(30)
-                # time.sleep(.05) # for testing
+                # time.sleep(30)
+                time.sleep(3) # for testing
 
     except Exception as e:
         logger.info(f'ERROR: {e}')

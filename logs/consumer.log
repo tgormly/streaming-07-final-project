@@ -1,0 +1,83 @@
+2024-06-10 21:34:43,067.consumer.INFO ==================================================
+2024-06-10 21:34:43,067.consumer.INFO Today is 2024-06-10 at 09:34 PM
+2024-06-10 21:34:43,067.consumer.INFO Running on: nt Windows 10
+2024-06-10 21:34:43,067.consumer.INFO Python version:  3.11.9
+2024-06-10 21:34:43,068.consumer.INFO Python path: C:\Users\timgo\Desktop\School\Summer2024\Data Streaming\Week 7\streaming-07-final-project\.venv
+2024-06-10 21:34:43,068.consumer.INFO Working dir: C:\Users\timgo\Desktop\School\Summer2024\Data Streaming\Week 7\streaming-07-final-project
+2024-06-10 21:34:43,068.consumer.INFO ==================================================
+2024-06-10 21:34:47,727.consumer.INFO 05/22/24 08:50:09 - New Animal: 
+Ashley, Cat, Sphynx, 10, Black, Loving Paws Rescue, Port Jennifer, Virginia, 05/22/24 08:50:09
+2024-06-10 21:34:47,728.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:34:55,725.consumer.INFO 05/22/24 09:07:36 - New Animal: 
+Jennifer, Cat, British Shorthair, 11, White, Four-Legged Friends Rescue, Brookebury, Tennessee, 05/22/24 09:07:36
+2024-06-10 21:34:55,726.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:34:58,745.consumer.INFO 05/22/24 09:15:28 - New Animal: 
+Lisa, Cat, Maine Coon, 6, Golden, Pawsitive Outcomes Rescue, Collinsborough, Texas, 05/22/24 09:15:28
+2024-06-10 21:34:58,745.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:01,789.consumer.INFO 05/22/24 09:23:16 - New Animal: 
+Jonathan, Cat, Ragdoll, 12, Cream, Furry Friends Haven, West George, Rhode Island, 05/22/24 09:23:16
+2024-06-10 21:35:01,791.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:07,851.consumer.INFO 05/22/24 09:38:18 - New Animal: 
+Kristin, Cat, Siamese, 3, Spotted, Happy Paws Rescue, West Blaketon, Maine, 05/22/24 09:38:18
+2024-06-10 21:35:07,852.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:29,232.consumer.INFO 05/22/24 12:03:34 - New Animal: 
+Anthony, Cat, Sphynx, 6, Spotted, Loving Paws Rescue, Rodneyburgh, North Dakota, 05/22/24 12:03:34
+2024-06-10 21:35:29,233.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:32,264.consumer.INFO 05/22/24 12:23:37 - New Animal: 
+Ann, Cat, Sphynx, 6, Striped, Hopeful Hearts Animal Shelter, Timothyborough, Idaho, 05/22/24 12:23:37
+2024-06-10 21:35:32,265.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:35,285.consumer.INFO 05/22/24 12:32:38 - New Animal: 
+Alison, Cat, Scottish Fold, 1, Spotted, Faithful Friends Animal Shelter, Lake Williamland, Wisconsin, 05/22/24 12:32:38
+2024-06-10 21:35:35,285.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:38,322.consumer.INFO 05/22/24 12:45:49 - New Animal: 
+Susan, Cat, Birman, 8, Brown, Four-Legged Friends Rescue, New Carol, Montana, 05/22/24 12:45:49
+2024-06-10 21:35:38,324.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:41,379.consumer.INFO 05/22/24 12:57:49 - New Animal: 
+David, Cat, Maine Coon, 15, Striped, Hopeful Hearts Animal Shelter, South Amy, Missouri, 05/22/24 12:57:49
+2024-06-10 21:35:41,382.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:47,455.consumer.INFO 05/22/24 14:24:05 - New Animal: 
+John, Cat, Birman, 14, Blue, Barks and Meows Haven, Pamelaberg, Illinois, 05/22/24 14:24:05
+2024-06-10 21:35:47,456.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:35:50,484.consumer.INFO 05/22/24 15:23:09 - New Animal: 
+Jeffrey, Cat, Sphynx, 12, Cream, Four-Legged Friends Rescue, Port Stephen, Maryland, 05/22/24 15:23:09
+2024-06-10 21:35:50,485.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:36:05,765.consumer.INFO 05/22/24 15:49:40 - New Animal: 
+Keith, Cat, British Shorthair, 15, Golden, Barks and Meows Haven, Smithfort, Mississippi, 05/22/24 15:49:40
+2024-06-10 21:36:05,766.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:36:17,981.consumer.INFO 05/22/24 16:15:43 - New Animal: 
+Shelly, Cat, Abyssinian, 1, Red, Pet Haven Rescue, North Trevorville, New Hampshire, 05/22/24 16:15:43
+2024-06-10 21:36:17,981.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:36:30,075.consumer.INFO 05/22/24 16:35:26 - New Animal: 
+Kevin, Cat, Oriental Shorthair, 6, Brown, Whiskers and Tails Sanctuary, South Megan, Connecticut, 05/22/24 16:35:26
+2024-06-10 21:36:30,076.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:36:33,110.consumer.INFO 05/22/24 17:18:12 - New Animal: 
+Robert, Cat, Scottish Fold, 4, Striped, Furry Friends Haven, Port David, Illinois, 05/22/24 17:18:12
+2024-06-10 21:36:33,111.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:36:36,124.consumer.INFO 05/22/24 17:40:29 - New Animal: 
+Marissa, Cat, Scottish Fold, 3, Striped, Hopeful Hearts Animal Shelter, Danielmouth, Ohio, 05/22/24 17:40:29
+2024-06-10 21:36:36,124.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:36:48,396.consumer.INFO 05/22/24 19:05:54 - New Animal: 
+Kaitlin, Cat, Scottish Fold, 14, White, Whiskers and Tails Sanctuary, South Joshuaside, Oregon, 05/22/24 19:05:54
+2024-06-10 21:36:48,402.consumer.INFO  [New Animal Reading] Done.
+
+2024-06-10 21:36:51,435.consumer.INFO 05/22/24 19:17:22 - New Animal: 
+John, Cat, British Shorthair, 8, Black, Cuddle Buddies Rescue, Lisachester, Washington, 05/22/24 19:17:22
+2024-06-10 21:36:51,436.consumer.INFO  [New Animal Reading] Done.
+
