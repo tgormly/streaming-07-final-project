@@ -26,6 +26,8 @@ Initialize RabbitMQ services
 
 Run <code>generate_data.py</code> to generate simulated adoption data.
 
-In one console, run <code>emitter_of_tasks.py</code> This will begin sending messages to RabbitMQ
+In one console, run <code>producer.py</code> This will begin sending messages to RabbitMQ
+![Console output of Producer](/images/Producer_Console.png)
 
-In another console, run <code>listening_worker.py</code> This will receive and process messages from RabbitMQ
+In another console, run <code>consumer.py</code> This will receive and process messages from RabbitMQ
+![Console output of Consumer](/images/Consumer_Console.png)
