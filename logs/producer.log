@@ -1261,3 +1261,102 @@ connection opened: host='localhost', queue_name='new-Cats'
 2024-06-12 08:19:09,905.producer.INFO  [x] Sent b'\x80\x04\x95\xdb\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x05Laura\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x12Oriental Shorthair\x94\x8c\x03age\x94K\t\x8c\x05color\x94\x8c\x03Red\x94\x8c\x0cshelter_name\x94\x8c\x16Fur-Ever Homes Shelter\x94\x8c\x0cshelter_city\x94\x8c\nWatkinston\x94\x8c\rshelter_state\x94\x8c\nNew Jersey\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 03:37:18\x94u.'
 2024-06-12 08:19:09,907.producer.INFO 
 connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:12,908.producer.INFO 05/12/24 03:44:30 - Row Injested:
+ Joshua, Dog, Yorkshire Terrier, 2, Golden, Barks and Meows Haven, Jacobsland, Illinois, 05/12/24 03:44:30
+
+2024-06-12 08:19:12,911.producer.INFO calling send_message('localhost', new-Dogs, Joshua, Dog, Yorkshire Terrier)
+
+2024-06-12 08:19:12,912.producer.INFO send_message(host='localhost', queue_name='new-Dogs', message=b'\x80\x04\x95\xdb\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Joshua\x94\x8c\x08pet_type\x94\x8c\x03Dog\x94\x8c\x05breed\x94\x8c\x11Yorkshire Terrier\x94\x8c\x03age\x94K\x02\x8c\x05color\x94\x8c\x06Golden\x94\x8c\x0cshelter_name\x94\x8c\x15Barks and Meows Haven\x94\x8c\x0cshelter_city\x94\x8c\nJacobsland\x94\x8c\rshelter_state\x94\x8c\x08Illinois\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 03:44:30\x94u.')
+2024-06-12 08:19:12,938.producer.INFO 
+connection opened: host='localhost', queue_name='new-Dogs'
+2024-06-12 08:19:12,945.producer.INFO  [x] Sent b'\x80\x04\x95\xdb\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Joshua\x94\x8c\x08pet_type\x94\x8c\x03Dog\x94\x8c\x05breed\x94\x8c\x11Yorkshire Terrier\x94\x8c\x03age\x94K\x02\x8c\x05color\x94\x8c\x06Golden\x94\x8c\x0cshelter_name\x94\x8c\x15Barks and Meows Haven\x94\x8c\x0cshelter_city\x94\x8c\nJacobsland\x94\x8c\rshelter_state\x94\x8c\x08Illinois\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 03:44:30\x94u.'
+2024-06-12 08:19:12,952.producer.INFO 
+connection closed: host='localhost', queue_name='new-Dogs'
+2024-06-12 08:19:15,953.producer.INFO 05/12/24 03:47:00 - Row Injested:
+ Angela, Cat, Abyssinian, 8, Brown, Furry Companions Shelter, New Elizabeth, Pennsylvania, 05/12/24 03:47:00
+
+2024-06-12 08:19:15,956.producer.INFO calling send_message('localhost', new-Cats, Angela, Cat, Abyssinian)
+
+2024-06-12 08:19:15,959.producer.INFO send_message(host='localhost', queue_name='new-Cats', message=b'\x80\x04\x95\xdd\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Angela\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\nAbyssinian\x94\x8c\x03age\x94K\x08\x8c\x05color\x94\x8c\x05Brown\x94\x8c\x0cshelter_name\x94\x8c\x18Furry Companions Shelter\x94\x8c\x0cshelter_city\x94\x8c\rNew Elizabeth\x94\x8c\rshelter_state\x94\x8c\x0cPennsylvania\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 03:47:00\x94u.')
+2024-06-12 08:19:15,988.producer.INFO 
+connection opened: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:15,994.producer.INFO  [x] Sent b'\x80\x04\x95\xdd\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Angela\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\nAbyssinian\x94\x8c\x03age\x94K\x08\x8c\x05color\x94\x8c\x05Brown\x94\x8c\x0cshelter_name\x94\x8c\x18Furry Companions Shelter\x94\x8c\x0cshelter_city\x94\x8c\rNew Elizabeth\x94\x8c\rshelter_state\x94\x8c\x0cPennsylvania\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 03:47:00\x94u.'
+2024-06-12 08:19:15,998.producer.INFO 
+connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:18,999.producer.INFO 05/12/24 04:49:48 - Row Injested:
+ Jeffrey, Cat, Oriental Shorthair, 7, Spotted, Wagging Tails Shelter, Allenstad, Tennessee, 05/12/24 04:49:48
+
+2024-06-12 08:19:19,000.producer.INFO calling send_message('localhost', new-Cats, Jeffrey, Cat, Oriental Shorthair)
+
+2024-06-12 08:19:19,000.producer.INFO send_message(host='localhost', queue_name='new-Cats', message=b'\x80\x04\x95\xde\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x07Jeffrey\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x12Oriental Shorthair\x94\x8c\x03age\x94K\x07\x8c\x05color\x94\x8c\x07Spotted\x94\x8c\x0cshelter_name\x94\x8c\x15Wagging Tails Shelter\x94\x8c\x0cshelter_city\x94\x8c\tAllenstad\x94\x8c\rshelter_state\x94\x8c\tTennessee\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 04:49:48\x94u.')
+2024-06-12 08:19:19,020.producer.INFO 
+connection opened: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:19,021.producer.INFO  [x] Sent b'\x80\x04\x95\xde\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x07Jeffrey\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x12Oriental Shorthair\x94\x8c\x03age\x94K\x07\x8c\x05color\x94\x8c\x07Spotted\x94\x8c\x0cshelter_name\x94\x8c\x15Wagging Tails Shelter\x94\x8c\x0cshelter_city\x94\x8c\tAllenstad\x94\x8c\rshelter_state\x94\x8c\tTennessee\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 04:49:48\x94u.'
+2024-06-12 08:19:19,024.producer.INFO 
+connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:22,027.producer.INFO 05/12/24 05:05:36 - Row Injested:
+ Julia, Cat, Sphynx, 8, Blue, Hopeful Hearts Animal Shelter, South James, Vermont, 05/12/24 05:05:36
+
+2024-06-12 08:19:22,030.producer.INFO calling send_message('localhost', new-Cats, Julia, Cat, Sphynx)
+
+2024-06-12 08:19:22,031.producer.INFO send_message(host='localhost', queue_name='new-Cats', message=b'\x80\x04\x95\xd5\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x05Julia\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Sphynx\x94\x8c\x03age\x94K\x08\x8c\x05color\x94\x8c\x04Blue\x94\x8c\x0cshelter_name\x94\x8c\x1dHopeful Hearts Animal Shelter\x94\x8c\x0cshelter_city\x94\x8c\x0bSouth James\x94\x8c\rshelter_state\x94\x8c\x07Vermont\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 05:05:36\x94u.')
+2024-06-12 08:19:22,045.producer.INFO 
+connection opened: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:22,046.producer.INFO  [x] Sent b'\x80\x04\x95\xd5\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x05Julia\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Sphynx\x94\x8c\x03age\x94K\x08\x8c\x05color\x94\x8c\x04Blue\x94\x8c\x0cshelter_name\x94\x8c\x1dHopeful Hearts Animal Shelter\x94\x8c\x0cshelter_city\x94\x8c\x0bSouth James\x94\x8c\rshelter_state\x94\x8c\x07Vermont\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 05:05:36\x94u.'
+2024-06-12 08:19:22,048.producer.INFO 
+connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:25,050.producer.INFO 05/12/24 05:24:18 - Row Injested:
+ Eric, Cat, Birman, 2, Black, Furever Friends Sanctuary, North Donnaville, North Dakota, 05/12/24 05:24:18
+
+2024-06-12 08:19:25,052.producer.INFO calling send_message('localhost', new-Cats, Eric, Cat, Birman)
+
+2024-06-12 08:19:25,054.producer.INFO send_message(host='localhost', queue_name='new-Cats', message=b'\x80\x04\x95\xdb\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x04Eric\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Birman\x94\x8c\x03age\x94K\x02\x8c\x05color\x94\x8c\x05Black\x94\x8c\x0cshelter_name\x94\x8c\x19Furever Friends Sanctuary\x94\x8c\x0cshelter_city\x94\x8c\x10North Donnaville\x94\x8c\rshelter_state\x94\x8c\x0cNorth Dakota\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 05:24:18\x94u.')
+2024-06-12 08:19:25,095.producer.INFO 
+connection opened: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:25,096.producer.INFO  [x] Sent b'\x80\x04\x95\xdb\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x04Eric\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Birman\x94\x8c\x03age\x94K\x02\x8c\x05color\x94\x8c\x05Black\x94\x8c\x0cshelter_name\x94\x8c\x19Furever Friends Sanctuary\x94\x8c\x0cshelter_city\x94\x8c\x10North Donnaville\x94\x8c\rshelter_state\x94\x8c\x0cNorth Dakota\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 05:24:18\x94u.'
+2024-06-12 08:19:25,102.producer.INFO 
+connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:28,104.producer.INFO 05/12/24 06:27:00 - Row Injested:
+ Rebecca, Cat, Maine Coon, 7, Striped, Four-Legged Friends Rescue, South Sarah, Rhode Island, 05/12/24 06:27:00
+
+2024-06-12 08:19:28,107.producer.INFO calling send_message('localhost', new-Cats, Rebecca, Cat, Maine Coon)
+
+2024-06-12 08:19:28,108.producer.INFO send_message(host='localhost', queue_name='new-Cats', message=b'\x80\x04\x95\xe0\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x07Rebecca\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\nMaine Coon\x94\x8c\x03age\x94K\x07\x8c\x05color\x94\x8c\x07Striped\x94\x8c\x0cshelter_name\x94\x8c\x1aFour-Legged Friends Rescue\x94\x8c\x0cshelter_city\x94\x8c\x0bSouth Sarah\x94\x8c\rshelter_state\x94\x8c\x0cRhode Island\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:27:00\x94u.')
+2024-06-12 08:19:28,138.producer.INFO 
+connection opened: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:28,141.producer.INFO  [x] Sent b'\x80\x04\x95\xe0\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x07Rebecca\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\nMaine Coon\x94\x8c\x03age\x94K\x07\x8c\x05color\x94\x8c\x07Striped\x94\x8c\x0cshelter_name\x94\x8c\x1aFour-Legged Friends Rescue\x94\x8c\x0cshelter_city\x94\x8c\x0bSouth Sarah\x94\x8c\rshelter_state\x94\x8c\x0cRhode Island\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:27:00\x94u.'
+2024-06-12 08:19:28,143.producer.INFO 
+connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:31,144.producer.INFO 05/12/24 06:43:03 - Row Injested:
+ Steven, Cat, Birman, 10, White, Loving Paws Rescue, Kellyville, Delaware, 05/12/24 06:43:03
+
+2024-06-12 08:19:31,146.producer.INFO calling send_message('localhost', new-Cats, Steven, Cat, Birman)
+
+2024-06-12 08:19:31,147.producer.INFO send_message(host='localhost', queue_name='new-Cats', message=b'\x80\x04\x95\xcc\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Steven\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Birman\x94\x8c\x03age\x94K\n\x8c\x05color\x94\x8c\x05White\x94\x8c\x0cshelter_name\x94\x8c\x12Loving Paws Rescue\x94\x8c\x0cshelter_city\x94\x8c\nKellyville\x94\x8c\rshelter_state\x94\x8c\x08Delaware\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:43:03\x94u.')
+2024-06-12 08:19:31,171.producer.INFO 
+connection opened: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:31,173.producer.INFO  [x] Sent b'\x80\x04\x95\xcc\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Steven\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Birman\x94\x8c\x03age\x94K\n\x8c\x05color\x94\x8c\x05White\x94\x8c\x0cshelter_name\x94\x8c\x12Loving Paws Rescue\x94\x8c\x0cshelter_city\x94\x8c\nKellyville\x94\x8c\rshelter_state\x94\x8c\x08Delaware\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:43:03\x94u.'
+2024-06-12 08:19:31,176.producer.INFO 
+connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:34,177.producer.INFO 05/12/24 06:44:04 - Row Injested:
+ Denise, Cat, Sphynx, 14, Cream, Happy Paws Rescue, Brennanhaven, South Carolina, 05/12/24 06:44:04
+
+2024-06-12 08:19:34,177.producer.INFO calling send_message('localhost', new-Cats, Denise, Cat, Sphynx)
+
+2024-06-12 08:19:34,178.producer.INFO send_message(host='localhost', queue_name='new-Cats', message=b'\x80\x04\x95\xd3\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Denise\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Sphynx\x94\x8c\x03age\x94K\x0e\x8c\x05color\x94\x8c\x05Cream\x94\x8c\x0cshelter_name\x94\x8c\x11Happy Paws Rescue\x94\x8c\x0cshelter_city\x94\x8c\x0cBrennanhaven\x94\x8c\rshelter_state\x94\x8c\x0eSouth Carolina\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:44:04\x94u.')
+2024-06-12 08:19:34,189.producer.INFO 
+connection opened: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:34,191.producer.INFO  [x] Sent b'\x80\x04\x95\xd3\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x06Denise\x94\x8c\x08pet_type\x94\x8c\x03Cat\x94\x8c\x05breed\x94\x8c\x06Sphynx\x94\x8c\x03age\x94K\x0e\x8c\x05color\x94\x8c\x05Cream\x94\x8c\x0cshelter_name\x94\x8c\x11Happy Paws Rescue\x94\x8c\x0cshelter_city\x94\x8c\x0cBrennanhaven\x94\x8c\rshelter_state\x94\x8c\x0eSouth Carolina\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:44:04\x94u.'
+2024-06-12 08:19:34,193.producer.INFO 
+connection closed: host='localhost', queue_name='new-Cats'
+2024-06-12 08:19:37,194.producer.INFO 05/12/24 06:45:43 - Row Injested:
+ Kristen, Dog, Boxer, 4, Striped, Wagging Tails Shelter, West Heidiside, Montana, 05/12/24 06:45:43
+
+2024-06-12 08:19:37,195.producer.INFO calling send_message('localhost', new-Dogs, Kristen, Dog, Boxer)
+
+2024-06-12 08:19:37,196.producer.INFO send_message(host='localhost', queue_name='new-Dogs', message=b'\x80\x04\x95\xd4\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x07Kristen\x94\x8c\x08pet_type\x94\x8c\x03Dog\x94\x8c\x05breed\x94\x8c\x05Boxer\x94\x8c\x03age\x94K\x04\x8c\x05color\x94\x8c\x07Striped\x94\x8c\x0cshelter_name\x94\x8c\x15Wagging Tails Shelter\x94\x8c\x0cshelter_city\x94\x8c\x0eWest Heidiside\x94\x8c\rshelter_state\x94\x8c\x07Montana\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:45:43\x94u.')
+2024-06-12 08:19:37,233.producer.INFO 
+connection opened: host='localhost', queue_name='new-Dogs'
+2024-06-12 08:19:37,235.producer.INFO  [x] Sent b'\x80\x04\x95\xd4\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x04name\x94\x8c\x07Kristen\x94\x8c\x08pet_type\x94\x8c\x03Dog\x94\x8c\x05breed\x94\x8c\x05Boxer\x94\x8c\x03age\x94K\x04\x8c\x05color\x94\x8c\x07Striped\x94\x8c\x0cshelter_name\x94\x8c\x15Wagging Tails Shelter\x94\x8c\x0cshelter_city\x94\x8c\x0eWest Heidiside\x94\x8c\rshelter_state\x94\x8c\x07Montana\x94\x8c\x0bdate_posted\x94\x8c\x1105/12/24 06:45:43\x94u.'
+2024-06-12 08:19:37,238.producer.INFO 
+connection closed: host='localhost', queue_name='new-Dogs'

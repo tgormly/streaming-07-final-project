@@ -361,3 +361,7 @@ Lisa, Dog, Golden Retriever, 5, Blue, Furever Friends Sanctuary, West Ethan, New
 Roy, Dog, Yorkshire Terrier, 10, Golden, Furry Companions Shelter, Holderborough, Virginia, 05/12/24 02:05:29
 2024-06-12 08:18:57,728.consumer.INFO  [New Animal Reading] Done.
 
+2024-06-12 08:19:12,947.consumer.INFO 05/12/24 03:44:30 - New Animal: 
+Joshua, Dog, Yorkshire Terrier, 2, Golden, Barks and Meows Haven, Jacobsland, Illinois, 05/12/24 03:44:30
+2024-06-12 08:19:12,949.consumer.INFO  [New Animal Reading] Done.
+
