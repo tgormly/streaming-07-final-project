@@ -27,7 +27,7 @@ cat_breeds = [
     'British Shorthair', 'Abyssinian', 'Birman', 'Oriental Shorthair', 'Scottish Fold'
 ]
 
-preferred_breed = ''
+preferred_breed = None
 
 def display_menu(breeds, pet_type):
     '''Used in user_interest() to display options to users
@@ -70,9 +70,11 @@ def user_interest():
         return pet_type, preferred_breed
 
 # define a callback function for each sensor that will be called when a message is received
-def new_pet_callback(ch, method, properties, body, preferred_breed):
+def new_pet_callback(ch, method, properties, body):
     """ 
-    callback function used when a message is received on a new pets queue
+    callback function used when a message is received on a new pets queue.
+
+    preferred_breed is an additional parameter.  This is specified by the user when launching the worker.  This will be used to see if a new pet matches the user's desired animal type and breed.  A message will be generated for the user if it does
     """
     
     # deserialize the dictionary sent by producer.py
@@ -82,6 +84,25 @@ def new_pet_callback(ch, method, properties, body, preferred_breed):
         f"{animal_data['name']}, {animal_data['pet_type']}, {animal_data['breed']}, "
         f"{animal_data['age']}, {animal_data['color']}, {animal_data['shelter_name']}, "
         f"{animal_data['shelter_city']}, {animal_data['shelter_state']}, {animal_data['date_posted']}")
+    
+    # Check to see if the new pet is the user's preferred breed
+    if preferred_breed == animal_data['breed']:
+        # TODO: Add actual notification process
+
+        logger.info(f'''
+***************************************
+*         New Animal Alert!
+* A new pet matches your preferences:
+* -----------------------------------                    
+* Name: {animal_data['name']}
+* Species: {animal_data['pet_type']}
+* Breed: {animal_data['breed']}
+* Age: {animal_data['age']}
+* -----------------------------------
+* Listed on: {animal_data['date_posted']}
+* Shelter: {animal_data['shelter_name']}
+* {animal_data['shelter_city']}, {animal_data['shelter_state']}
+***************************************''')
 
 
         # when done with task, tell the user
@@ -93,6 +114,7 @@ def new_pet_callback(ch, method, properties, body, preferred_breed):
 # define a main function to run the program
 def main(hn: str = "localhost"):
     """ Continuously listen for messages on several named queues."""
+
     # when a statement can go wrong, use a try-except block
     try:
         # try this code, if it works, keep going
@@ -125,9 +147,13 @@ def main(hn: str = "localhost"):
         # restrict worker to one unread message at a time
         channel.basic_qos(prefetch_count=1) 
 
-        # prompt user for their interest
+        # prompt user for their interest and assign their choices
+        global preferred_breed
         pet_type, preferred_breed = user_interest()
 
+        # interest_tuple = user_interest()
+        # pet_type = interest_tuple[0]
+        # preferred_breed = interest_tuple[1]
 
         # listen to each queue and execute corresponding callback function
         if pet_type == 'cat':
